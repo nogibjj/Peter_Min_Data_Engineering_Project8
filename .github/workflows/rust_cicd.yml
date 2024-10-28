@@ -1,7 +1,12 @@
 name: Rust CI/CD Pipeline
 
 on:
-  push
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
