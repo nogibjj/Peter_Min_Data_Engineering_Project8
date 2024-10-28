@@ -10,4 +10,4 @@ lint:
 refactor: format lint
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest -vv --cov=main --cov=test_*.py
