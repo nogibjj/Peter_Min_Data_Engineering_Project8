@@ -39,21 +39,27 @@ cargo build
 
 ## Performance Summary Note
 Since the performance values are in different units, here's a breakdown:
+
 - For a target value of 100
-    - Python's memory usage is 312 bytes, Rust's memory usage is 224 bytes, Rust uses **28.21% less memory** than Python.
-    - Python's runtime is 0.000391006 second, Rust' runtime is 0.00002775 second, Rust runs **92.90% faster** than Python.
+    - Python: 312 bytes, Rust: 224 bytes, Rust uses **28.21% less memory** than Python.
+    - Python: 0.0000391006 second, Rust: 0.00002775 second, Rust runs **29.03% faster** than Python.
+
 - For a target value of 500
-    - Python's memory usage is 920 bytes, Rust's memory usage is 784 bytes, Rust uses **14.78% less memory** than Python.
-    - Python's runtime is 0.000644207 seconds, Rust's runtime is 0.00038575 seconds, Rust runs **40.12% faster** than Python.
+    - Python: 920 bytes, Rust: 784 bytes, Rust uses **14.78% less memory** than Python.
+    - Python: 0.000644207 seconds, Rust: 0.00038575 seconds, Rust runs **40.12% faster** than Python.
+
 - For a target value of 1000
-    - Python's memory usage is 1432 bytes, Rust's memory usage is 1368 bytes, Rust uses **4.46% less memory** than Python.
-    - Python's runtime is 0.0024478436 seconds, Rust's runtime is 0.001312125 seconds, Rust runs **46.38% faster** than Python.
+    - Python: 1432 bytes, Rust: 1368 bytes, Rust uses **4.46% less memory** than Python.
+    - Python: 0.0024478436 seconds, Rust: 0.001312125 seconds, Rust runs **46.38% faster** than Python.
+
 - For a target value of 5000
-    - Python's memory usage is 5432 bytes, Rust's memory usage is 5376 bytes, Rust uses **1.03% less memory** than Python.
-    - Python's runtime is 0.0497107506 seconds, Rust's runtime is 0.019291416 seconds, Rust runs **61.19% faster** than Python.
+    - Python: 5432 bytes, Rust: 5376 bytes, Rust uses **1.03% less memory** than Python.
+    - Python: 0.0497107506 seconds, Rust: 0.019291416 seconds, Rust runs **61.19% faster** than Python.
+
 - For a target value of 10000 
-    - Python's memory usage is 10008 bytes, Rust's memory usage is 9856 bytes, Rust uses **1.52% less memory** than Python.
-    - Python's runtime is 0.1756289005 seconds, Rust's runtime is 0.043136792 seconds, Rust runs **75.44% faster** than Python.
+    - Python: 10008 bytes, Rust: 9856 bytes, Rust uses **1.52% less memory** than Python.
+    - Python: 0.1756289005 seconds, Rust: 0.043136792 seconds, Rust runs **75.44% faster** than Python.
+
 - For a target value of 50000
-    - Python's memory usage is 41880 bytes, Rust's memory usage is 41088 bytes, Rust uses **1.89% less memory** than Python.
-    - Python's runtime is 3.8479928970 seconds, Rust's runtime is 0.658702 seconds, Rust runs **82.89% faster** than Python.
+    - Python: 41880 bytes, Rust: 41088 bytes, Rust uses **1.89% less memory** than Python.
+    - Python: 3.8479928970 seconds, Rust: 0.658702 seconds, Rust runs **82.89% faster** than Python.
