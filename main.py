@@ -1,22 +1,23 @@
-'''A naive algorithm to find prime numbers in Python.'''
+"""A naive algorithm to find prime numbers in Python."""
+
 import time
 import sys
 
 
 def find_all_primes(target):
-    '''Find all prime numbers smaller than or equal to target'''
+    """Find all prime numbers smaller than or equal to target"""
     result = []
 
     if target <= 1:
         return result
-    
+
     for value in range(2, target):
         for i in range(2, value):
             if value % i == 0:
                 break
         else:
             result.append(value)
-    
+
     return result
 
 

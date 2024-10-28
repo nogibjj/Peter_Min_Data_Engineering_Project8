@@ -1,10 +1,10 @@
-# Mini_Project_7
-[![CI/CD Pipeline](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project7/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project7/actions/workflows/cicd.yml)
+# Mini_Project_8
 
-This is the README for my Mini Project 7 for the IDS706 - Data Engineering Systems class at Duke University.
+
+This is the README for my Mini Project 8 for the IDS706 - Data Engineering Systems class at Duke University.
 
 ## Overview
-The purpose of this project is to translate my learning in Rust so far to a CLI tool. Since I am interested in achieving financial freedom as early as possible, and since one of the easiest way to do so is by investing early & compounding your return and/or interests, I will build a simple CLI tool that calculates the total investment balance from user inputs.
+The purpose of this project is to translate an existing piece of code in Python3 to Rust and compare their performances. For this assignment, I wrote a naive algorithm that finds all prime numbers smaller than or equal to a specified non-negative value.
 
 ## Usage
 To use the tool, first ensure you have Rust and Cargo installed:
@@ -16,17 +16,44 @@ cargo --version
 
 Then navigate to this project folder and run the calculator in 1 of 2 ways:
 
-`cargo run -- calculate-total-balance <initial_deposit_amount> <monthly_contribution> <estimated_annual_growth_rate> <compounding_frequency> <number_of_years_to_accumulate>`
+`cargo run`
 
 or
 ```
+cd prime_numbers
 cargo build
-./target/release/<package_name> calculate-total-balance <initial_deposit_amount> <monthly_contribution> <estimated_annual_growth_rate> <compounding_frequency> <number_of_years_to_accumulate>
+./target/release/prime_numbers
 ```
 
-Assuming initial_deposit_amount = 5000, monthly_contribution = 200, estimated_annual_growth_rate = 0.1, compounding_frequency = 1, number_of_years_to_accumulate = 40, the output will be like this:
-> Your total balance after 40 years with a initial deposit of $5000 and a monthly contribution of $200 under a annual growth rate of 10% with compounding frequency of 1 is $1288518.41.
+## Code Robustnes Check
 
-## Note
-- When entering the value for estimated annual growth rate, please enter it as a decimal value (e.g. if you estimate your wealth will grow by an average of 8% a year, enter 0.08). The output will display it as a regular interest rate format.
-- When entering the value for compounding frequency, please reference this table: monthly = 12, quarterly = 4, semi-annually = 2, annually = 1, daily = 365.
+![alt text](python3_checks.png "Python3 Code Checks")
+
+![alt text](rust_checks.png "Rust Code Checks")
+
+## Performance
+
+![alt text](python3_performance.png "Python3 Performance")
+
+![alt text](rust_performance.png "Rust Performance")
+
+## Performance Summary Note
+Since the performance values are in different units, here's a breakdown:
+- For a target value of 100
+    - Python's memory usage is 312 bytes, Rust's memory usage is 224 bytes, Rust uses **28.21% less memory** than Python.
+    - Python's runtime is 0.000391006 second, Rust' runtime is 0.00002775 second, Rust runs **92.90% faster** than Python.
+- For a target value of 500
+    - Python's memory usage is 920 bytes, Rust's memory usage is 784 bytes, Rust uses **14.78% less memory** than Python.
+    - Python's runtime is 0.000644207 seconds, Rust's runtime is 0.00038575 seconds, Rust runs **40.12% faster** than Python.
+- For a target value of 1000
+    - Python's memory usage is 1432 bytes, Rust's memory usage is 1368 bytes, Rust uses **4.46% less memory** than Python.
+    - Python's runtime is 0.0024478436 seconds, Rust's runtime is 0.001312125 seconds, Rust runs **46.38% faster** than Python.
+- For a target value of 5000
+    - Python's memory usage is 5432 bytes, Rust's memory usage is 5376 bytes, Rust uses **1.03% less memory** than Python.
+    - Python's runtime is 0.0497107506 seconds, Rust's runtime is 0.019291416 seconds, Rust runs **61.19% faster** than Python.
+- For a target value of 10000 
+    - Python's memory usage is 10008 bytes, Rust's memory usage is 9856 bytes, Rust uses **1.52% less memory** than Python.
+    - Python's runtime is 0.1756289005 seconds, Rust's runtime is 0.043136792 seconds, Rust runs **75.44% faster** than Python.
+- For a target value of 50000
+    - Python's memory usage is 41880 bytes, Rust's memory usage is 41088 bytes, Rust uses **1.89% less memory** than Python.
+    - Python's runtime is 3.8479928970 seconds, Rust's runtime is 0.658702 seconds, Rust runs **82.89% faster** than Python.
