@@ -1,5 +1,6 @@
 # Mini_Project_8
-
+[![Python CI/CD Pipeline](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project8/actions/workflows/python_cicd.yml/badge.svg)](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project8/actions/workflows/python_cicd.yml)
+[![Rust CI/CD Pipeline](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project8/actions/workflows/rust_cicd.yml/badge.svg)](https://github.com/nogibjj/Peter_Min_Data_Engineering_Project8/actions/workflows/rust_cicd.yml)
 
 This is the README for my Mini Project 8 for the IDS706 - Data Engineering Systems class at Duke University.
 
