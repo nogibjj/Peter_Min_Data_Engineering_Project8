@@ -1,0 +1,17 @@
+name: Python CI/CD Pipeline
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Check code
+        run: make py_refactor
+    
+      - name: Test code
+        run: make py_test
